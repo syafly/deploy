@@ -32,3 +32,9 @@ jobs:
             git pull origin main &&
             docker compose up -d --build
           "
+
+- name: Debug TS Secrets
+  run: |
+    echo "ID OK"
+    if [ -z "${{ secrets.TS_CLIENT_ID }}" ]; then echo "ID kosong"; fi
+    if [ -z "${{ secrets.TS_CLIENT_SECRET }}" ]; then echo "SECRET kosong"; fi
