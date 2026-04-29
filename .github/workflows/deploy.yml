@@ -7,22 +7,28 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup SSH
+      - name: Debug
         run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
+          echo "USER:"
+          whoami
+          echo "PWD:"
+          pwd
+          echo "FILES:"
+          ls -la
 
-      - name: Deploy ke VM
+      - name: Deploy
         run: |
-          ssh -o StrictHostKeyChecking=no ${{ secrets.VM_USER }}@${{ secrets.VM_HOST }} "
-            cd /home/ubuntu/app &&
-            git pull origin master &&
-            docker compose up -d --build
-          "
+          echo "Masuk folder app"
+          cd /home/ubuntu/app || exit 1
+
+          echo "Git pull"
+          git pull origin master || exit 1
+
+          echo "Docker run"
+          docker compose up -d --build || exit 1
