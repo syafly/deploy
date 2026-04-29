@@ -1,4 +1,4 @@
-name: Deploy to VM
+name: Deploy + Test API
 
 on:
   push:
@@ -10,25 +10,30 @@ jobs:
     runs-on: self-hosted
 
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Debug
+      - name: Debug Info
         run: |
-          echo "USER:"
+          echo "User:"
           whoami
-          echo "PWD:"
+          echo "Directory:"
           pwd
-          echo "FILES:"
+          echo "Files:"
           ls -la
 
-      - name: Deploy
+      - name: Deploy ke Server
         run: |
-          echo "Masuk folder app"
           cd /home/ubuntu/app || exit 1
-
-          echo "Git pull"
           git pull origin master || exit 1
-
-          echo "Docker run"
           docker compose up -d --build || exit 1
+
+      - name: Install Node.js & Newman
+        run: |
+          sudo apt update
+          sudo apt install -y nodejs npm
+          npm install -g newman
+
+      - name: Run Postman Collection
+        run: |
+          newman run tests/collection.json
