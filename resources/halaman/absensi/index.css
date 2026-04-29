@@ -1,0 +1,169 @@
+@import '../../partials/table/pagination/index.css';
+
+.time-setting-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.time-setting-card:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+}
+
+.time-label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    font-size: 0.85rem; /* Diperkecil sedikit */
+    white-space: nowrap; /* Mencegah wrap */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Tambahkan ellipsis jika terlalu panjang */
+}
+
+.time-inputs {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem; /* Diperkecil gap-nya */
+    width: 100%;
+}
+
+.time-separator {
+    font-weight: 600;
+    color: #6c757d;
+    font-size: 0.75rem; /* Diperkecil */
+    flex-shrink: 0; /* Mencegah menyusut */
+    min-width: 2rem; /* Lebar minimum */
+    text-align: center;
+}
+
+.time-input {
+    border: 1.5px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.4rem 0.3rem; /* Padding diperkecil */
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.8rem; /* Font size diperkecil */
+    width: 100%; /* Pastikan mengisi container */
+    min-width: 0; /* Penting untuk flexbox */
+}
+
+.time-input:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.1);
+}
+
+
+.student-avatar {
+    width: 36px;
+    height: 36px;
+}
+
+.keterangan-text {
+    font-style: italic;
+    color: #dc3545;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.empty-state {
+    padding: 2rem 1rem;
+}
+
+.form-control, .form-select {
+    border: 1.5px solid #e9ecef;
+    border-radius: 8px;
+    padding: 0.5rem 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.1);
+}
+
+/* Input Group */
+.input-group-text {
+    background: #f8f9fa;
+    border: 1.5px solid #e9ecef;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .time-inputs {
+        /* flex-direction: column; */
+        gap: 0.25rem;
+        font-size: 0.8rem;
+    }
+    
+    .time-separator {
+        margin: 0.25rem 0;
+        font-size: 0.7rem;
+        min-width: 1.5rem;
+    }
+    
+    .student-avatar {
+        width: 32px;
+        height: 32px;
+    }
+    
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+
+    .time-input {
+        font-size: 0.75rem;
+        padding: 0.35rem 0.25rem;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    animation: fadeIn 0.5s ease;
+}
+
+.time-saved-feedback {
+    border-color: #198754 !important;
+    background-color: rgba(25, 135, 84, 0.1) !important;
+}
+
+.terlambat-row {
+    background-color: #fff9e6 !important;
+}
+
+.keterlambatan-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.keterlambatan-badges .badge {
+    font-size: 0.7em;
+    padding: 3px 6px;
+}
+
+.student-avatar {
+    width: 32px;
+    height: 32px;
+}
+
+.bg-warning.bg-opacity-10 {
+    background-color: rgba(255, 193, 7, 0.1) !important;
+}
+
+.text-warning {
+    color: #ffc107 !important;
+}
+
+.border-warning {
+    border-color: #ffc107 !important;
+}

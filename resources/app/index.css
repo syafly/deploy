@@ -1,0 +1,205 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '@fortawesome/fontawesome-free/css/all.min.css';
+@import '../partials/navbar/index.css';
+@import '../partials/sidebar/index.css';
+
+:root{
+    --primary: #1751ce;
+    --primary-more: #1e3a8a;
+    --secondary: rgba(109, 109, 109, 0.555);
+    --secondary-more: rgba(44, 39, 39, 0.973);
+    --success: rgb(12, 161, 87);
+    --success-more: rgb(2, 121, 61);
+    --warning: rgb(209, 209, 0);
+    --warning-more: #e3b448;
+    --danger: rgb(192, 0, 0);
+    --danger-more: #990000;
+    --info:  #38BDF8;
+    --info-more: #006a97;
+    --light: #f1f5f9;
+    --dark: #132d63;
+    --dark-more: #1F2937;
+    --dark-linear: linear-gradient(135deg, #1d2e77 0%, #3b0909 100%);
+}
+
+body {
+    background-color: #eaecec;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*transition: margin-right 0.3s ease;*/
+}
+
+.table th {
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: wheat;
+    border-bottom: 2px solid #dee2e6;
+    background-color: var(--dark);
+}
+
+.table td {
+    vertical-align: middle;
+    padding: 10px 20px;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.badge {
+    font-weight: 500;
+    border-radius: 6px;
+}
+
+.badge a {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.badge a:hover {
+    opacity: 1;
+}
+
+.rounded-circle {
+    font-size: 0.9rem;
+}
+
+.card {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.btn, .card, .form-control, .form-select {
+    transition: 
+        transform 0.2s ease-in-out,
+        box-shadow 0.2s ease-in-out,
+        border-color 0.2s ease-in-out,
+        background-color 0.2s ease-in-out,
+        color 0.2s ease-in-out;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.text-success {
+    color: var(--success) !important;
+}
+
+.text-info{
+    color: var(--info) !important;
+}
+
+.text-danger {
+    color: var(--danger) !important;
+}
+
+.text-warning {
+    color: var(--warning) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.bg-primary{
+    background-color: var(--primary) !important;
+}
+
+.bg-secondary{
+    background-color: var(--secondary) !important;
+}
+
+.bg-success{
+    background-color: var(--success) !important;
+}
+
+.bg-warning{
+    background-color: var(--warning) !important;
+}
+
+.bg-danger{
+    background-color: var(--danger) !important;
+}
+
+.btn-primary-profesional {
+    background-color: var(--primary-more);
+    color: var(--light);
+
+}
+
+.btn-primary-profesional:hover {
+    background-color: var(--primary);
+    color: var(--light);
+}
+
+.btn-outline-primary-profesional {
+    color: var(--primary-more);
+    border: 1px solid var(--primary-more)
+}
+
+.btn-outline-primary-profesional:hover {
+    color: var(--primary)
+}
+
+.btn-secondary-profesional {
+    background-color: var(--secondary-more);
+    color: var(--light);
+}
+
+.btn-secondary-profesional:hover {
+    background-color: var(--secondary);
+    color: var(--light);
+}
+
+.btn-success-profesional {
+    background-color: var(--success-more);
+    color: #FFFFFF;
+}
+
+.btn-success-profesional:hover {
+    background-color: var(--sucess);
+}
+
+.btn-warning-profesional {
+    background-color: var(--warning-more);
+    color: var(--dark);
+}
+
+.btn-warning-profesional:hover {
+    background-color: var(--warning);
+    color: var(--light);
+}
+
+.btn-danger-profesional {
+    background-color: var(--danger-more);
+    color: var(--light);
+}
+
+.btn-danger-profesional:hover {
+    background-color: var(--danger);
+    color: var(--light)
+}
+
+.btn-outline-danger-profesional {
+    color: var(--danger-more)
+}
+
+.btn-outline-danger-profesional:hover {
+    color: var(--danger);
+}

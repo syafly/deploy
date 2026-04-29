@@ -1,0 +1,109 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.pagination .page-item {
+    margin: 0;
+}
+
+.pagination .page-link {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    min-width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    background: #f8f9fa;
+    color: #132d63;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.pagination .page-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.pagination .page-item.active .page-link {
+    background: var(--dark-linear);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    font-weight: 600;
+    animation: pageChange 0.3s ease-out;
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #94a3b8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    opacity: 0.6;
+}
+
+.pagination .page-item.disabled .page-link:hover {
+    background: #f1f5f9;
+    color: #94a3b8;
+    transform: none;
+    box-shadow: none;
+}
+
+.pagination .page-link:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+@keyframes pageChange {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.pagination.pagination-sm .page-link {
+    padding: 6px 10px;
+    min-width: 36px;
+    height: 36px;
+    font-size: 0.8rem;
+}
+
+.pagination.pagination-lg .page-link {
+    padding: 10px 16px;
+    min-width: 48px;
+    height: 48px;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .pagination ul {
+        gap: 2px;
+    }
+    
+    .pagination .page-link {
+        padding: 6px 8px;
+        min-width: 36px;
+        height: 36px;
+        font-size: 0.8rem;
+    }
+    
+    .d-flex.justify-content-between.align-items-center {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}

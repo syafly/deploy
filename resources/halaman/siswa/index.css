@@ -1,0 +1,85 @@
+@import '../../partials/table/pagination/index.css';
+
+.glowing-pulse {
+  position: relative;
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.7); /* awalnya bercahaya */
+  animation: pulse 1.5s infinite;
+  color: #c00c11;
+}
+
+.glowing-pulse:hover{
+    background: #c00c11;
+    color: white;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7),
+                0 0 20px rgba(255, 0, 0, 0.5),
+                0 0 40px rgba(255, 0, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.9),
+                0 0 40px rgba(255, 0, 0, 0.6),
+                0 0 60px rgba(255, 0, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.7),
+                0 0 20px rgba(255, 0, 0, 0.5),
+                0 0 40px rgba(255, 0, 0, 0.3);
+  }
+}
+.card-alternatif-with-footer .card-header, .card-alternatif-with-footer .card-body, .card-alternatif-with-footer .card-footer{
+  background-color: #F8F9FA
+}
+
+.card-alternatif-with-footer {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    font-family: 'Inter', system-ui, sans-serif;
+    border: 1px solid rgba(0,0,0,0.03);
+    position: relative;
+  }
+
+  .card-alternatif-with-footer .card-header {
+    padding: 18px 24px;
+    position: relative;
+  }
+
+  .card-alternatif-with-footer .card-header h3 {
+    margin: 0;
+    color: #2d3748;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+
+  .card-alternatif-with-footer .accent-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(135deg, #7f0c10, #c00c11, #ff1a1f);
+  }
+
+  .card-alternatif-with-footer .card-body {
+    padding: 20px 24px;
+    color: #4a5568;
+    line-height: 1.6;
+  }
+
+  .card-alternatif-with-footer .card-body p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  .kelas-btn{
+    min-width: 80px;
+    margin: 5px;
+  }
+
+  #tambah-kelas-placeholder{
+    margin-left: 5px;
+  }
