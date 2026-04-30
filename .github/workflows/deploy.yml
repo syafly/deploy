@@ -13,26 +13,19 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Debug Info
-        run: |
-          echo "User:"
-          whoami
-          echo "Directory:"
-          pwd
-          echo "Files:"
-          ls -la
-
       - name: Deploy ke Server
         run: |
-          cd /home/ubuntu/app || exit 1
-          git pull origin master || exit 1
-          docker compose up -d --build || exit 1
+          cd /home/ubuntu/app
+          git pull origin master
+          docker compose up -d --build
 
-      - name: Install Node.js & Newman
+      - name: Install Newman
         run: |
-          sudo apt update
-          sudo apt install -y nodejs npm
           npm install -g newman
+
+      - name: Check File
+        run: |
+          ls -la tests
 
       - name: Run Postman Collection
         run: |
