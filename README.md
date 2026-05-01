@@ -53,9 +53,9 @@ Melalui webapp yang disediakan, pengguna (guru) dapat mengakses informasi kehadi
 
 ## 👥 Maintainer
 
-- Ilham – [@kyoomik](https://instagram.com/kyoomik)
+- Ilham & Syafly– [@kyoomik,@syafly](https://instagram.com/kyoomik)
 - [Techno Kreatif Solusindo](https://www.instagram.com/technokreatifsolusindo)
 
-## 📄 Lisensi
+## 📄 Lisensis
 
 MIT License
