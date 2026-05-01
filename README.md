@@ -53,7 +53,8 @@ Melalui webapp yang disediakan, pengguna (guru) dapat mengakses informasi kehadi
 
 ## 👥 Maintainer
 
-- Ilham & Syafly– [@kyoomik,@syafly](https://instagram.com/kyoomik)
+- Ilham – [@kyoomik](https://instagram.com/kyoomik)
+- syafly - [@syafly](https://instagram.com/syafly_r)
 - [Techno Kreatif Solusindo](https://www.instagram.com/technokreatifsolusindo)
 
 ## 📄 Lisensis
